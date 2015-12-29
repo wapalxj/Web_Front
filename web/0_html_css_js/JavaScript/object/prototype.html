@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function Person(){
+            Person.prototype.name="vero";
+            Person.prototype.age="vero";
+            Person.prototype.sayName=function(){
+                alert(this.name);
+            }
+        }
+        var p1=new Person();
+        var p2=new Person();
+        alert(p1.sayName()==p2.sayName());
+
+        p1.name="vnix";
+        alert(p1.name==p2.name);
+
+    </script>
+    <p onMouseOver="alert('ppp');">onMouseOver</p>
+    <!--<p onMouseOut="alert('out');">onMouseOut</p>-->
+
+</body>
+</html>

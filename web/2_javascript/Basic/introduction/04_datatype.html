@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function println(content){
+            return document.write(content+"<br>");
+        }
+        println(typeof null);
+        println(typeof undefined);
+        println("null==undefined:"+(null==undefined));
+        println("NaN==NaN:"+(NaN==NaN));
+        println("null instanceof Object:"+(null instanceof Object));
+
+        var a=1;
+        var b=0&&a;
+        var c=0||a;
+        println("b:"+b);
+        println("c:"+c);
+    </script>
+
+</body>
+</html>

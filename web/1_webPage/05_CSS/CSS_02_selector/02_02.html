@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        /*p::first-letter{color: red;}*/
+        /*::first-line{color: red;}*/
+        /*p::before{content:"before";}*/
+        p::after{content:"after";}
+        /*::selection{*/
+            /*color: #0eff2e;*/
+            /*background:#ccc;*/
+
+        /*}*/
+        .main>h2{color: #05fff7;}
+        /*h2+p{color: #0814ff}*/
+        div p{color: #ff0eec ;}
+    </style>
+
+</head>
+<body>
+    <p>CSS伪元素选择器<br>
+        CSS伪元素选择器
+    </p>
+    <p>CSS伪元素选择器</p>
+
+    <div>ddddddddddddd</div>
+    <div class="main">
+        <h2>h2h2h2h2h</h2>
+        <h2>h2h2h2h2h</h2>
+        <div>
+            <h2>h2h2h2h2h</h2>
+            <p>ppppp</p>
+        </div>
+    </div>
+    <div>
+        <h2>兄弟</h2>
+        <p>兄弟2</p>
+    </div>
+</body>
+</html>

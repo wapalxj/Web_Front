@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //函数
+        var u=24;
+        var v=16;
+        alert(gcd(u,v));
+        function gcd(u,v){
+            var a= u,b=v;
+            var temp=v;
+            while(b!=0){
+                temp=a%v;
+                a=b;
+                b=temp;
+            }
+            document.write(u+"和"+v+"最大公约数是"+u);
+            alert(u+"和"+v+"最大公约数是"+u);
+            return u;
+        }
+        document.write("<br/>");
+
+        //自动运行函数
+        (function fun_noCall(){
+            document.write("没有人调用的函数！");
+        })();
+
+
+        document.write("<br/>");
+
+
+        //函数变量
+        var f= function (a,b) {
+            document.write("函数变量！！！+++++"+(a+b));
+        };
+        function cal(f,a,b){
+            f(a,b);
+        }
+        cal(f,10,5);
+
+        document.write("<br/>");
+
+        //方便换行的做法
+        function prinltln(n){
+            return n+"<br>";
+        }
+        prinltln(document.write("方便换行！！！"));
+
+
+        (function p(){
+            var u=10;
+            if(u==10){
+                u=100;
+            }
+            alert(u);
+        })()
+    </script>
+</body>
+</html>

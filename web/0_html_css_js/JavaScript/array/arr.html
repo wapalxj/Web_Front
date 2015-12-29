@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var marks=new Array();
+            marks[0]=1;
+
+        var marks2=new Array(10);//大小为10
+
+        var marks3=new Array(1,2,3,4);
+        alert(marks3[2]);
+
+        var marks4=[1,2,3,4,5];
+
+
+
+        var marks5=[1,2,3,4,"sadsad"];
+        alert(marks5[3]);
+        alert(marks5[4]);
+        alert(marks5.length);
+
+
+        var colors=new Array('r','g','b');
+        colors.length=4;
+
+        colors[colors.length]="black";
+        alert("color.length="+colors.length);
+        alert("color[3]="+colors[3]);
+        alert("color[4]="+colors[4]);
+        alert("colors.toString="+colors.toString());
+        alert("colors.valueOf="+colors.valueOf());
+        alert("colors.join()="+colors.join("||"));
+    </script>
+</body>
+</html>
