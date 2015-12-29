@@ -6,7 +6,18 @@
 </head>
 <body>
     <script>
-
+        function println(con){
+            return document.write(con+"<br>");
+        }
+        var a=6>4;
+        println("6>4: "+a);
+        println("0==false:----->"+(0==false));
+        println("1==true:----->"+(1==true));
+        println("2==true:----->"+(2==true));
+        println("a=0||2:----->"+(a=0||2));
+        println("空字符串''=0:----->"+(""==0));
+        println("a=2&&true:----->"+(a=2&&true));
+        println("a=true&&2:----->"+(a=true&&2));
     </script>
 </body>
 </html>
