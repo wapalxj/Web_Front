@@ -7,17 +7,23 @@
 <body>
     <script>
         function println(con){
-            return document.write(con+"<br>");
+            return document.write(con+"<br><br>");
         }
         var a=6>4;
         println("6>4: "+a);
         println("0==false:----->"+(0==false));
         println("1==true:----->"+(1==true));
-        println("2==true:----->"+(2==true));
+        println("3==true:----->"+(3==true));
         println("a=0||2:----->"+(a=0||2));
         println("空字符串''=0:----->"+(""==0));
         println("a=2&&true:----->"+(a=2&&true));
         println("a=true&&2:----->"+(a=true&&2));
+        //0==false
+        println("a=0||20:----->"+(a=0||20));
+        //2不转换为true/false
+        println("a=2||20:----->"+(a=2||20));
+        println("2==true:----->"+(a==true));
+        println("2==false:----->"+(a==false));
     </script>
 </body>
 </html>
