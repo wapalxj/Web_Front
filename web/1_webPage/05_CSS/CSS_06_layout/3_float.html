@@ -3,8 +3,62 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+        <style>
+            .div{
+                height: 90px;
+            }
+            .div0{
+                width: 200px;
+                border: 1px dashed red;
+            }
+            .div1{
+                background-color: #ff7a37;
+                margin-bottom: 10px;
+            }
+            .div2{
+                background-color: #ff2d08;
+                margin-bottom: 10px;
+                float: left;
+            }
+            .div3{
+                background-color: #05adff;
+            }
+
+
+            .div00{
+                border: 1px dashed red;
+                margin-top: 100px;
+                width: 750px;
+            }
+            .div4{
+                background-color: #16ff7b;
+                float: left;
+            }
+            .div5{
+                background-color: #ff2d08;
+                float: left;
+            }
+            .div6{
+                background-color: #05adff;
+                float: left;
+            }
+
+        </style>
 </head>
 <body>
+    <div class="div0">
+        <div class="div div1">no-float</div>
+        <div class="div div2">float--left</div>
+        <div class="div div3">no-float</div>
+    </div>
 
+    <div class="div00">
+        <div class="div div4">float: left</div>
+        <div class="div div5">float: left</div>
+        <div class="div div6">float: left</div>
+    </div>
+    <div>
+        元素占据但是内部不占据
+    </div>
 </body>
 </html>
