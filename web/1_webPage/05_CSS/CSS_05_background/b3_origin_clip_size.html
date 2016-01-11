@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .div{
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            border: 30px solid green;
+            padding: 40px;
+            background-color: #05ffa0;
+            background-image: url("red.png");
+        }
+        .div1{
+
+            /*background-origin: border-box;*/
+            background-position: 0px 20px;
+            background-repeat: no-repeat;
+        }
+        .div2{
+            /*background-clip: border-box;*/
+            background-clip: content-box;
+            /*background-clip: padding-box;*/
+            background-origin: content-box;
+        }
+        .div3{
+            background-repeat: no-repeat;
+            background-size: 50%;
+            background-position: center;
+        }
+        .div4{
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .div5{
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        .div6{
+            background: url("red.png") 0 center/50% auto no-repeat scroll chartreuse;
+        }
+    </style>
+</head>
+<body>
+    <div class="div div1">background-origin</div>
+    <div class="div div2">background-clip</div>
+    <div class="div div3">background-size:50%</div>
+    <div class="div div4">background-size:cover</div>
+    <div class="div div5">background-size:contain</div>
+    <div class="div div6">background</div>
+</body>
+</html>
