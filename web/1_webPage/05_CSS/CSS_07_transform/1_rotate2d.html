@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            opacity: 0.7;
+        }
+        .parent{
+            background-color: #80ff11;
+            margin: 100px auto;
+        }
+        .child{
+            background-color: #05ffa0;
+            transform: rotate(20deg);
+        }
+        .child2{
+            background-color: #05ffa0;
+            transform-origin: 0 0;
+            transform: rotate(45deg);
+        }
+        .A{
+            color: #ff0e05;
+            font-size: 300px;
+            text-align: center;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="child"></div>
+    </div>
+
+
+    <div class="parent">
+        <div class="child2"></div>
+    </div>
+
+    <div class="parent">
+        <div class="A">
+            B
+        </div>
+    </div>
+
+</body>
+</html>
