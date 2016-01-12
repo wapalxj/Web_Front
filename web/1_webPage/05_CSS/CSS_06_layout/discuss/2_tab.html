@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tab</title>
+    <style>
+        *{
+            font: 14px "Microsoft YaHei";
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width: 572px;
+            height:150px;
+            border: 1px solid #999;
+        }
+        .tab{
+            height: 20%;
+            background-color: #f1f1f1;
+            display: flex;
+        }
+        .tab_item{
+            display: flex;
+            flex: 1;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #cecece;
+        }
+        .tab .tab1{
+            border: none;
+            background-color: #FFF;
+        }
+        .content{
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="tab">
+            <div class="tab_item tab1">课程</div>
+            <div class="tab_item tab2">学习计划</div>
+            <div class="tab_item tab3">技能图谱</div>
+        </div>
+        <div class="content">课程内容</div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="tab">
+            <div class="tab_item tab2">课程</div>
+            <div class="tab_item tab1">学习计划</div>
+            <div class="tab_item tab3">技能图谱</div>
+        </div>
+        <div class="content">学习计划内容</div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="tab">
+            <div class="tab_item tab3">课程</div>
+            <div class="tab_item tab2">学习计划</div>
+            <div class="tab_item tab1">技能图谱</div>
+        </div>
+        <div class="content">技能图谱内容</div>
+    </div>
+</body>
+</html>

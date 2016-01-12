@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>flex布局</title>
+    <style>
+        .slide{
+            background-color: #37bcff;
+            width: 200px;
+            height: 100px;
+            position: relative;
+        }
+        .pointer i{
+            display: inline-block;
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+            background-color: #000;
+            white-space: pre;
+        }
+        .pointer{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        .pointer .current{
+            background-color: #FFF;
+        }
+        i:nth-child(2),i:nth-child(3){
+            margin-left: -3px;
+        }
+        i:hover{
+            background-color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide">
+        <div class="pointer">
+            <i class="current"></i>
+            <i></i>
+            <i></i>
+        </div>
+    </div>
+</body>
+</html>

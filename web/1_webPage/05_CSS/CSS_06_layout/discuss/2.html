@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>弹窗</title>
+
+    <style type="text/css">
+
+        body{
+            width: 1500px;
+            height: 1500px;
+        }
+        .popup {
+
+            position: fixed;
+
+            top:50%;
+
+            left: 50%;
+
+            transform:translate(-50%,-50%);
+
+            z-index: 99;
+
+            width: 300px;
+
+            border:1px solid #cccccc;
+
+            border-radius: 5px;
+
+        }
+
+        .titlebar {
+
+            margin: 0;
+
+            position: relative;
+
+            height: 40px;
+
+            background-color: #eeeeee;
+
+        }
+
+        .tb {
+
+            margin: 0 20px;
+
+            height: 100%;
+
+            font:14px "微软雅黑";
+
+            line-height: 40px;
+
+            overflow: hidden;
+
+            white-space: nowrap;
+
+            text-overflow: ellipsis;
+
+        }
+
+        .close {
+
+            border:none;
+
+            padding: 0;
+
+            position: absolute;
+
+            top: 10px;
+
+            right: 10px;
+
+            width: 10px;
+
+            height: 10px;
+
+            background-image: url('../x.png');
+
+            background-size: 10px 10px;
+
+            cursor: pointer;
+
+        }
+
+        .content {
+
+            padding: 20px;
+
+        }
+
+        .ct {
+
+            margin: 0 0 20px 0;
+
+            font:12px "宋体";
+
+            line-height: 1.5;
+
+        }
+
+        .button {
+
+            display: block;
+
+            margin: 0 auto;
+
+            width: 80px;
+
+            height: 30px;
+
+            background-color: blue;
+
+            color:white;
+
+            border-radius: 5px;
+
+            border: none;
+
+            padding: 0;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="popup">
+
+    <div class="titlebar">
+
+        <p class="tb">标题栏</p>
+
+        <div class="close"></div>
+
+    </div>
+
+    <div class="content">
+
+        <p class="ct">内容区段落</p>
+
+        <button class="button">确定</button>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>
+

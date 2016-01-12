@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float布局</title>
+    <style>
+        .parent{
+            width: 810px;
+            margin: 10px auto;
+            /*outline: 3px dashed #000406;*/
+        }
+        .div{
+            height: 400px;
+        }
+        .side{
+            width: 200px;
+            background-color: red;
+            float: left;
+            font: 50px "Consolas";
+            color: #FFF;
+            line-height: 400px;
+            text-align: center;
+        }
+        .main{
+            width: 600px;
+            background-color: #0282ff;
+            margin-left: 10px;
+            float: left;
+            font: 50px "Consolas";
+            color: #FFF;
+            line-height: 400px;
+            text-align: center;
+        }
+        .clearfix:after{
+            content: "我是用来清除浮动的！";
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent clearfix">
+        <div class="div side">侧栏</div>
+        <div class="div main">主栏</div>
+    </div>
+    <!--<div style="background-color: #0ba2ff;width: 600px;height: 300px;"></div>-->
+    <!--<div style="background-color: #01ff82;width: 600px;height: 300px;"></div>-->
+</body>
+</html>

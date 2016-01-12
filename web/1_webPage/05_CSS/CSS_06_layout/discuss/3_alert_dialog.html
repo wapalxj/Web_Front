@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>alert_dialog</title>
+    <style>
+        body{
+            width: 1500px;
+            height: 1500px;
+        }
+        .dialog{
+            position: fixed;
+            left: 50%;
+            top:50%;
+            width: 300px;
+            border:1px solid #cccccc;
+            border-radius: 5px;
+            transform:translate(-50%,-50%);
+            padding: 0;
+        }
+
+        .title_bar{
+            position: relative;
+            height: 40px;
+            background-color: #eeeeee;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+        .title{
+            margin: 0;
+            font: 14px "Microsoft YaHei";
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 40px;
+        }
+        .close_log{
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            right: 10px;
+            top: 10px;
+        }
+        .close_log:hover{
+            cursor: pointer;
+        }
+
+        .content{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .para{
+            margin: 0;
+        }
+        .submit{
+            width: 80px;
+            height: 30px;
+            margin:20px;
+            margin-bottom: 0;
+            left: 50%;
+            align-self: center;
+            border-radius: 5px;
+            background-color: #0e88ff;
+            color: #FFF;
+        }
+    </style>
+</head>
+<body>
+    <div class="dialog">
+        <div class="title_bar">
+            <h3 class="title">标题栏标题栏标题栏标题栏标题标题栏栏标题标题栏栏</h3>
+            <img class="close_log" title="关闭" alt="关闭" src="xx.png">
+        </div>
+        <div class="content">
+            <p class="para">内容区段落内容区段落内容区段落内容
+            区段落内容区段落内容区段落内容区段
+            落内容区段落内容区段落段落内容区段落段落内容区段落
+            </p>
+            <input class="submit" type="submit" value="确定">
+        </div>
+
+    </div>
+</body>
+</html>

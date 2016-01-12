@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>float布局</title>
+    <style>
+        .parent{
+            display: flex;
+            margin: 10px auto;
+        }
+        .div{
+            height: 400px;
+        }
+        .side{
+            display: flex;
+            flex:0 0 200px;
+            background-color: red;
+            float: left;
+            font: 50px "Consolas";
+            color: #FFF;
+            justify-content: center;
+            align-items: center;
+        }
+        .main{
+            display: flex;
+            flex:1 0 ;
+            background-color: #0282ff;
+            margin-left: 10px;
+            float: left;
+            font: 50px "Consolas";
+            color: #FFF;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="div side">侧栏</div>
+    <div class="div main">主栏</div>
+</div>
+<!--<div style="background-color: #0ba2ff;width: 600px;height: 300px;"></div>-->
+<!--<div style="background-color: #01ff82;width: 600px;height: 300px;"></div>-->
+</body>
+</html>
