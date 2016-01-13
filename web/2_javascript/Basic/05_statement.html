@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function println(con){
+            return document.write(con+"<br><br>");
+        }
+        var a=6>4;
+        println("6>4: "+a);
+        println("0==false:----->"+(0==false));
+        println("1==true:----->"+(1==true));
+        println("3==true:----->"+(3==true));
+        println("0||2:----->"+(0||2));
+        println("空字符串''==0:----->"+(""==0));
+        println("a=2&&true:----->"+((2&&true)));
+        println("a=true&&2:----->"+((true&&2)));
+        println("'4'==true:----->"+('4'==true));
+        println("'4'&&3:----->"+('4'&&3));
+        //0==false
+        println("0||20:----->"+(0||20));
+        //2不转换为true/false
+        println("a=2||20:----->"+(a=2||20));
+        println("2==true:----->"+(2==true));
+        println("2==false:----->"+(2==false));
+        //关于[]
+        println("关于[]:");
+        println("[]==true:----->"+([]==true));
+        println("[]==false:----->"+([]==false));
+        println("![]:----->"+(![]));
+        println("[]==[]:----->"+([]==[]));
+        println("[]==![]:----->"+([]==![]));
+        println("[]&&'':----->"+([]&&""));
+
+        println(Math.floor(Math.random()*10));
+    </script>
+</body>
+</html>
