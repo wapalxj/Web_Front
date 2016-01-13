@@ -2,9 +2,61 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>form</title>
+    <title></title>
+    <link rel="shortcut icon" href="btncir2.png">
 </head>
 <body>
+<a href="#here">form</a>
+<p id="here">here</p>
+<a href="mailto:wapalxj@163.com" target="_self">contact us</a>
 
+<a href="http://www.baidu.com" target="iframe">连接到iframe</a>
+<iframe id="iframe" name="iframe" width="1080px" height="860px">a标签的内容再这里展示</iframe>
+<form>
+    <fieldset>
+        <legend>照片选择</legend>
+        <label for="select">选择照片</label>
+        <input type="file" id="select" value="选择文件">
+    </fieldset>
+    <fieldset>
+        <legend>综合设置</legend>
+        <div>选择尺寸:</div>
+        <div>
+            <input class="cb" id="inch5" type="checkbox" value="5" name="size">
+            <label for="inch5">5寸</label>
+            <input class="cb" id="inch6" type="checkbox" value="6" name="size">
+            <label for="inch6">6寸</label>
+        </div>
+        <div>选择相纸：</div>
+        <div>
+            <input name="rd" type="radio" id="fushi" >
+            <label for="fushi">富士</label>
+            <input name="rd" type="radio" id="keda">
+            <label for="keda">柯达</label>
+        </div>
+
+        <div>
+            <label for="peisong">配送方式：</label>
+            <select id="peisong">
+                <optgroup label="g1">
+                    <option value="0">顺丰</option>
+                    <option value="1">圆通</option>
+                    <option value="2">韵达</option>
+                </optgroup>
+            </select>
+        </div>
+
+        <div>
+            <label for="text">商品描述：</label>
+            <input type="text" placeholder="请描述商品" id="text">
+        </div>
+
+        <div>
+            <label for="feedback" style="vertical-align: top">意见反馈：</label>
+            <textarea name="feedback" id="feedback" rows="4" cols="30" ></textarea>
+        </div>
+
+    </fieldset>
+</form>
 </body>
 </html>
