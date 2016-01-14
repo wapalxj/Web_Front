@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d</title>
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+
+        }
+        .parent{
+            position: relative;
+            background-color: rgba(27, 255, 133,0.5);
+            margin: 100px auto;
+            perspective: 2000px;
+        }
+        .b{
+            background-color: #5173ff;
+            opacity: 0.5;
+            /*background-color: rgba(209, 255, 55, 0.75);*/
+        }
+        .b1{
+            position: absolute;
+            transform: rotateX(45deg);
+            transform-style: preserve-3d;
+        }
+        .b2{
+            transform: rotateY(45deg);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="b b1">
+            <div class="b b2"></div>
+        </div>
+    </div>
+</body>
+</html>

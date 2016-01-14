@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .parent{
+            position: relative;
+            width: 800px;
+            height: 200px;
+            background-color: #0ba2ff;
+        }
+        .c1{
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            background-color: #2bff0a;
+            border-radius: 50% 50%;
+            text-align: center;
+            font: 50px/100px "Consolas";
+            -webkit-animation: c1 2s alternate 2 both;
+        }
+        @-webkit-keyframes c1{
+            0%{
+                top:0;
+                left: 0;
+                color: #000;
+            }
+            50%{
+                left: 50%;
+                top:100px;
+                background-color: #0ba2ff;
+                color: #ff0739;
+                transform: rotate(180deg);
+            }
+            100%{
+                top:0;
+                left: 100%;
+                background-color: #ff0ac3;
+                color: rgba(255, 178, 3, 0.82);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="c1">V</div>
+    </div>
+</body>
+</html>

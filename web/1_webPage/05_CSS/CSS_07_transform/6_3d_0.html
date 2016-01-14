@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3d</title>
+    <style>
+        div{
+            width: 150px;
+            height: 150px;
+
+        }
+        .parent{
+            position: relative;
+            background-color: rgba(119,147,36,0.5);
+            margin: 100px auto;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+        }
+        .t{
+            position: absolute;
+            background-color: rgba(119,147,36,0.75);
+        }
+        .t1{
+            transform: rotate3d(1,0,0,45deg)  rotate3d(0,1,0,45deg) rotate3d(0,0,1,45deg);
+        }
+        .t2{
+            transform: rotate3d(1,1,1,45deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="t t1"></div>
+    </div>
+    <div class="parent">
+        <div class="t t2"></div>
+    </div>
+</body>
+</html>
