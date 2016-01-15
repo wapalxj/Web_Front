@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sum</title>
+</head>
+<body>
+    <script>
+        function println(content){
+            return document.write(content+"<br>");
+        }
+
+        var arr=[1,2,3,4];
+        var sum=0;
+        var i=0;
+        //1
+        while (i<arr.length){
+            sum+=arr[i];
+            i++;
+        }
+        println(1+"------>"+sum);
+        //2
+        sum=0;
+        for(i=0;i<arr.length;i++){
+            sum+=arr[i];
+        }
+        println(2+"------>"+sum);
+        //3
+        sum=0;
+        var editScore=function(item,index,array){
+            sum+=item;
+            return item;
+        };
+        arr.forEach(editScore);
+        println(3+"------>"+sum);
+
+        //4
+        sum=0;
+        var addScore= function (item,index,array) {
+            sum+=item;
+            return item;
+        };
+        arr.map(addScore);
+        println(4+"------>"+sum);
+
+        //5
+        var red=function(pre,item,arr){
+            sum+=pre;
+        };
+        println(5+"------>"+sum);
+    </script>
+</body>
+</html>
