@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>copy an object</title>
+</head>
+<body>
+    <script>
+        function println(content){
+            return document.write(content+"<br>");
+        }
+//        var a=null;
+//        var b=a;
+//        a=10;
+//        println(b);
+
+        function clone(obj){
+            var temp={};
+            for (var attr in obj){
+                temp[attr]=obj[attr];
+            }
+            return temp;
+        }
+        var o={name:"vnix",age:20};
+        var c=clone(o);
+
+        println(c.name="vero"+ c.age);
+        println(o.name+ o.age);
+    </script>
+</body>
+</html>

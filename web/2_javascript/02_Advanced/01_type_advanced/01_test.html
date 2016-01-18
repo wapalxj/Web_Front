@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function println(content){
+        return document.write(content+"<br>");
+    }
+//            var a=null;
+//            var b=a;
+//            a=10;
+//            println(b);
+
+    var value=10;
+     // 函数调用模式
+     function add(i, j){
+       return i+j;
+     }
+     var myNumber = {
+       value: 1,
+       double: function(){
+         var helper = function(){
+           value=2;
+           this.value = add(this.value,this.value);
+         };
+         helper();
+       }
+     };
+
+    myNumber.double();
+    println(myNumber.value);
+    println(this.value);
+</script>
+</body>
+</html>
