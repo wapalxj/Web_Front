@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /**
+         * 函数escapeHTML用于转义html字符串中的特殊字符(<>"&)。
+
+         语法如下：
+
+         var escapedStr = escapeHTML(htmlStr);
+
+         使用范例如下：
+
+         escapeHTML('<div>Tom&Jerry</div> ');
+
+         返回值：
+
+         '&lt;div&gt;Tom&amp;Jerry&lt;/div&gt; '
+
+         escapeHTML('<input type="text" name="mobile"> ');
+
+         返回值：
+
+         '&lt;inputtype=&quot;text&quot; name=&quot;mobile&quot;&gt; '
+
+         请写出函数escapeHTML的实现代码。
+
+
+         * @param htmlStr
+         * @returns {XML|string|void}
+         */
+        function escapeHTML(htmlStr){
+            var newStr=htmlStr.replace(/[<>"&]/g,function(char){
+                switch (char){
+                    case "<":
+                        return "&lt;";
+                    case ">":
+                        return "&gt;";
+                    case "\"":
+                        return "&quot;";
+                    case "&":
+                        return "&amp;";
+                }
+            });
+            return newStr;
+        }
+        htmlStr='<input type="text" name="mobile">';
+        var escapedStr = escapeHTML(htmlStr);
+        alert(escapedStr);
+        document.write(escapedStr);
+    </script>
+</body>
+</html>
