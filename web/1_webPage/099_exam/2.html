@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        .title_p,.username_p,.password_p{
+            margin-bottom: 15px;
+        }
+        .title{
+            font: bold 14px/16px "Microsoft YaHei";
+
+        }
+        .username,.password{
+            display:inline-block;
+            width: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" action="/login" class="form">
+        <div class="title_p">
+            <p class="title">登录网易通行证</p>
+        </div>
+        <div class="username_p">
+            <label for="username" class="username">用户名:</label>
+            <input id="username" type="text">
+        </div>
+        <div class="password_p">
+            <label for="password" class="password">密码:</label>
+            <input id="password" type="password">
+        </div>
+        <div>
+            <input type="submit" value="登录">
+        </div>
+    </form>
+</body>
+</html>

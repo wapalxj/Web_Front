@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .container{
+            display: flex;
+        }
+        .img{
+            width: 100px;
+            height: 100px;
+            flex-shrink: 0;
+        }
+        .text{
+            width: 150px;
+            margin-left: 15px;
+            line-height: 25px;
+            font-family: "宋体";
+            height: 75px;
+        }
+        .text h2{
+            color: #000;
+            font-weight: bold;
+            font-size: 16px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-bottom: 0;
+        }
+        .text p{
+            margin-top: 0;
+            height: 75px;
+            overflow: hidden;
+            font-size: 14px;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img class="img" src="red.png">
+        <div class="text">
+            <h2>标题文字太长你隐藏不隐藏标题文字太长你隐藏不隐藏</h2>
+            <p>段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段
+                落文字段落文字段落文字段落文字段落文字段落文字段落文字段
+                落文字段落文字段落文字段落文字段落文字段落文字段落文字</p>
+        </div>
+    </div>
+</body>
+</html>
