@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>选项卡</title>
+
+<style>
+body{background-color: #f0f0f0;font: 14px "Microsoft yahei";}
+p{text-align: center;color: #ababab;font-size: 16px;}
+
+.wrap{background-color: #fff;width: 400px;height: 280px;margin: 100px auto 5px;padding:66px;}
+
+.drop_down_menu{border:1 solid red;margin:0 auto;width: 400px;height: 147px;position: relative;
+}
+
+
+/*以上都是无关的修饰，以下才是考题CSS*/
+
+.menu{position: absolute;left: 32%;}
+.btn{width: 48px;height: 26px;background-color: #eee;border:1px solid #ddd;margin-bottom: 1px;line-height: 26px;position: relative;}
+li{list-style: none;color:#000;font-size:12px;font-family: "宋体";text-align: center;}
+.bnn li{height: 30px;background-color: #fff;width: 80px;border-top:1px solid #ddd;padding: 0 10px;line-height: 30px;border-left:1px solid #ddd;border-right:1px solid #ddd;}
+.bnn li:last-child{border-bottom:1px solid #ddd;}
+.bnn{position:absolute;left:-41px;top: 28px;}
+.bnn li:hover{background-color: #ddd;}
+</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="drop_down_menu">
+
+          <ul class="menu">
+          	<li class="btn">按钮
+          		<ul class="bnn">
+          			<li>下拉菜单项</li>
+          			<li class="bnn_n1">下拉菜单项</li>
+          			<li>下拉菜单项</li>
+          			<li>下拉菜单项</li>
+          		</ul>
+          	</li>
+          </ul>
+
+
+		     
+			   
+		</div><!--END drop_down_menu-->
+
+    </div><!--END wrap-->
+
+
+		<p>BY 荷小音</p>
+
+
+
+	
+</body>
+</html>

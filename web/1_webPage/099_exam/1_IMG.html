@@ -2,33 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>题目1</title>
     <style>
-        .container{
+        .parent{
+            margin: 0;
             display: flex;
         }
         .img{
-            width: 100px;
-            height: 100px;
-            flex-shrink: 0;
+            width: 100px;height: 100px;
         }
         .text{
-            width: 150px;
             margin-left: 15px;
             line-height: 25px;
-            font-family: "宋体";
-            height: 75px;
+            height: 100px;/*行高为25，4行则为100*/
+            width: 200px;
+            font-family: "宋体",serif;
         }
-        .text h2{
+        .title{
+            margin: 0;
             color: #000;
             font-weight: bold;
-            font-size: 16px;
+            white-space: nowrap;
             overflow: hidden;
             text-overflow: ellipsis;
-            white-space: nowrap;
-            margin-bottom: 0;
+            font-size: 16px;
+
         }
-        .text p{
+        .p{
             margin-top: 0;
             height: 75px;
             overflow: hidden;
@@ -38,14 +38,18 @@
     </style>
 </head>
 <body>
-    <div class="container">
-        <img class="img" src="red.png">
-        <div class="text">
-            <h2>标题文字太长你隐藏不隐藏标题文字太长你隐藏不隐藏</h2>
-            <p>段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段落文字段
-                落文字段落文字段落文字段落文字段落文字段落文字段落文字段
-                落文字段落文字段落文字段落文字段落文字段落文字段落文字</p>
-        </div>
+<div class="parent">
+    <img class="img" src="http://163.com/x.jpg">
+    <div class="text">
+        <h2 class="title">
+            标题文字标题文字标题文字标题文字标题文字标题文字
+        </h2>
+        <p class="p">
+            段落文字段落文字段落文字段落文字段落文字段落文字段落
+            文字段落文字段落文字段落文字段落文字段落文字段落文字
+            段落文字段落文字段落文字段落文字段落文字段落文字段落
+        </p>
     </div>
+</div>
 </body>
 </html>

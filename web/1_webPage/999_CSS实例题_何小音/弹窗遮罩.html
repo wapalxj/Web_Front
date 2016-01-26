@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>弹窗遮罩</title>
+
+<style>
+body{background-color: #f0f0f0;font:14px "Microsoft YaHei";height: 2000px;}
+p{text-align: center;color: #ababab;font-size: 16px;position: fixed;bottom: 100px;left: 50%;}
+
+.wrap{background-color: #fff;width: 647px;height: 280px;margin: 100px auto 5px;padding:66px;position: fixed;left: 25%;}
+
+.dialog_box{margin:0 auto;width: 300px;border:1px solid #cccccc;border-radius: 5px;position: relative;position: fixed;z-index: 999;left: 43%;
+}
+.title{padding: 0 20px;height: 40px;font:14px "Microsoft YaHei";white-space: nowrap;overflow: hidden; text-overflow:ellipsis;background-color: #eeeeee;line-height: 40px;}
+.close{position:absolute;cursor: pointer;width: 10px;height: 10px;line-height: 10px;right: 10px;top: 10px;}
+.content{padding: 20px;background-color: #fff;font:12px "宋体" ;line-height: 1.5em;}
+button{margin:20px auto;width: 80px;height: 30px;border-radius: 5px;background-color: #2f7ecb;color: #fff;display: block;}
+
+</style>
+
+</head>
+<body>
+	<div class="wrap">
+		<div class="dialog_box">
+		     <div class="title">这个标题很长很长超出会隐藏不隐藏就去死这个标题很长很长超出会隐藏不隐藏就去死</div>
+		     <div class="close">x</div>
+		     <div class="content">内容区段落，高度未知（由内容区的内容决定）o(*////▽////*)多写内容区段落，高度未知（由内容区的内容决定）o(*////▽////*)多写内容区段落，高度未知（由内容区的内容决定）o(*////▽////*)多写
+
+                 <button type="submit">确定</button>
+
+		     </div>
+			   
+		</div><!--END tab-->
+
+    </div><!--END wrap-->
+
+
+		<p>BY 荷小音</p>
+
+
+
+	
+</body>
+</html>

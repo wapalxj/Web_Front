@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /**
+         * 	最简单的做法是封装Object.prototype.toString.call/apply(v)
+
+         * @param content
+         */
+        function println(content){
+            return document.write(content+"<br>");
+        }
+        function type(v){
+            if ((typeof v) == "object"){
+                if(v==null){
+                    return "null";
+                }else{
+                    switch (true){
+                        case (v instanceof Array):
+                            return "array";
+                        case (v instanceof Date):
+                            return "date";
+                        case (v instanceof Number):
+                            return "number";
+                        case (v instanceof Boolean):
+                            return "boolean";
+                        case (v instanceof RegExp):
+                            return "regexp";
+                        case (v instanceof Error):
+                            return "error";
+                        case (v instanceof String):
+                            return "string";
+                        default:
+                            return "object";
+                    }
+                }
+            }else{
+                return (typeof v);
+            }
+        }
+        println(type (new Error("this is am error!!!")));
+        println(type(1));
+        println(type(new Number(1)));
+        println(type("abc"));
+        println(type(new String("abc")));
+        println(type(true));
+        println(type(undefined));
+        println(type(null));
+        println(type({}));
+        println(type([]));
+        println(type(new Date));
+        println(type(/\d/));
+        println(type(function () {}));
+    </script>
+</body>
+</html>

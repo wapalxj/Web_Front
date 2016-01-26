@@ -2,40 +2,57 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>题目2</title>
     <style>
-        *{
-            margin: 0;
-        }
         .title_p,.username_p,.password_p{
             margin-bottom: 15px;
         }
+        .username_p,.password_p{
+            height: 20px;
+        }
         .title{
             font: bold 14px/16px "Microsoft YaHei";
-
         }
-        .username,.password{
+        .username,.password,.sub{
             display:inline-block;
             width: 60px;
+            font:12px "宋体";
+            vertical-align:middle;
+        }
+        input{
+            width: 200px;
+            height: 20px;
+            border: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .submit{
+            color: #fff;
+            background-color: #10bdff;
+            width:40px;
+            height: 20px;
+            border: none;
+        }
+        .sub{
+            visibility: hidden;
         }
     </style>
 </head>
 <body>
-    <form method="post" action="/login" class="form">
-        <div class="title_p">
-            <p class="title">登录网易通行证</p>
-        </div>
-        <div class="username_p">
-            <label for="username" class="username">用户名:</label>
-            <input id="username" type="text">
-        </div>
-        <div class="password_p">
-            <label for="password" class="password">密码:</label>
-            <input id="password" type="password">
-        </div>
-        <div>
-            <input type="submit" value="登录">
-        </div>
-    </form>
+<form method="post" action="/login" class="form">
+    <div class="title_p">
+        <p class="title">登录网易通行证</p>
+    </div>
+    <div class="username_p">
+        <label for="username" class="username">用户名:</label>
+        <input id="username" type="text">
+    </div>
+    <div class="password_p">
+        <label for="password" class="password">密码:</label>
+        <input id="password" type="password">
+    </div>
+    <label class="sub">登录:</label>
+    <input class="submit" type="submit" value="登录">
+
+</form>
 </body>
 </html>

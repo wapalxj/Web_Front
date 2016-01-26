@@ -71,19 +71,22 @@
 // var ferrari = new Car("ferrari", "yellow");
 
 
-// // 函数调用模式
-// function add(i, j){
-//   return i+j;
-// }
-// var myNumber = {
-//   value: 1,
-//   double: function(){
-//     var helper = function(){
-//       this.value = add(this.value,this.value);
-//     }
-//     helper();
-//   }
-// }
+ // 函数调用模式
+ function add(i, j){
+   return i+j;
+ }
+ var myNumber = {
+   value: 1,
+   double: function(){
+     var helper = function(){
+//       value:2,
+       this.value = add(this.value,this.value);
+     };
+     helper();
+   }
+ };
+myNumber.double();
+alert(myNumber.value);
 
  // arguments转数组
 // function add(i, j) {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function println(content){
+            return document.write(content+"<br>");
+        }
+        var x=10;
+        function foo(){
+            println(x);
+        }
+        function bar(){
+            var x=20;
+            foo();
+        }
+        bar();
+    </script>
+</body>
+</html>
