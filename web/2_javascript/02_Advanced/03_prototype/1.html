@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Create(){}
+        //Object.create()
+        var a={name:"vero"};
+        var a1=Object.create(a);//a1的prototype指向a
+        var m=Object.create(null);//m将没有Object的任何方法
+//        m.toString();//报错
+        //构造函数
+        var b=function(){this.name="bbb"};
+//        b.prototype={age:20};
+        var b2=new b();//b2的prototype指向b的prototype，也就是b
+        alert(b2.name);
+    </script>
+</body>
+</html>

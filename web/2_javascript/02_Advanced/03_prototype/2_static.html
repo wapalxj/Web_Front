@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Person(name,age) {
+            this.age=age;
+            this.getName=function ()
+            {
+                alert("name:"+name);
+            };
+        }
+        Person.prototype.getAge=function()
+        {
+            alert("age:"+this.age);
+        };
+        Person.sleepState="sleeping!";//静态属性
+        Person.sleep=function()//静态方法
+        {
+            alert("sleepingxxxx"+this.sleepState);
+        };
+        var p1=new Person("vero",55);
+        p1.getName();
+        p1.getAge();
+        Person.sleep();//静态方法
+
+        //删除原型上的东西
+//        delete Person.prototype.getAge;
+//        p1.getAge();
+    </script>
+</body>
+</html>

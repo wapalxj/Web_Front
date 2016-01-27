@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包的简单例子</title>
+</head>
+<body>
+    <script>
+        (function (){
+            var m=0;
+            function getM(){
+                return m;
+            }
+            function setM(val){
+                m=val;
+            }
+            window.g=getM;
+            window.s=setM;
+        })();
+
+        s(20);
+        alert(g());
+    </script>
+</body>
+</html>

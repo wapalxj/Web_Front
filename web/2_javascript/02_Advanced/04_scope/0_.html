@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!--麦子JS面向对象节-->
+</head>
+<body>
+    <script>
+        alert(a);
+//        alert(b);//b is not defined
+        alert(f);
+        alert(g);
+
+        var a=5;
+        b=6;
+        alert(b);
+        function f(){
+            console.log("fff");
+        }
+        var g= function () {
+            console.log("ggg");
+        };
+        alert(g);
+
+//        函数透同名覆盖
+        function f2(){
+            alert("f2222222222");
+        }
+        function f2(){
+            alert("f3333333333");
+        }
+
+        f2();
+    </script>
+</body>
+</html>

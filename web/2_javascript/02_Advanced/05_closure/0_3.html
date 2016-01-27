@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            margin: 10px;
+            background-color: aqua;
+            width:200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="1">1</div>
+    <div id="2">2</div>
+    <div id="3">3</div>
+    <script>
+        //没有闭包的问题
+//        for(var i=1;i<=3;i++){
+//            var ele=document.getElementById(i);
+//            ele.onclick=function (){
+//                alert(i);
+//            }
+//        }
+        //使用闭包解决
+        for(var i=1;i<=3;i++){
+            var ele=document.getElementById(i);
+//            ele.onclick=(function (id) {
+//                return function () {
+//                    alert(id);
+//                }
+//            })(i);
+
+            function clickItem(id){
+                return function (){
+                    alert(id);
+                };
+            }
+            ele.onclick=clickItem(i);
+
+            //注意：传递的是i的引用，所以不能这样写，这样写产生的3个闭包的i的引用会全部增加到4
+//            function clickItem(){
+//                return function (){
+//                    alert(i);
+//                };
+//            }
+        }
+    </script>
+</body>
+</html>

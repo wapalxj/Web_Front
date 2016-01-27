@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Closure</title>
 </head>
 <body>
     <script>
-
-        var  n="qwe";
         function de(){
-            n=123;
+            var  n=0;
+            return function (){
+                return n++;
+            }
         }
-        de();
-        alert(n);
+        alert(de()());//父函数每次被调用，都产生不同的闭包
+        alert(de()());//父函数每次被调用，都产生不同的闭包
+
+        var f=de();
+        alert(f());
+        alert(f());
+
+
     </script>
 </body>
 </html>
