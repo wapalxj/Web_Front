@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function fibonacci(n){
+            if (n<0){
+                return "输入的值不能小于0！";
+            }else if(n<2){
+                return n;
+            }else {
+                return fibonacci(n-1)+fibonacci(n-2);
+            }
+        }
+        var num;
+        document.write("下标为0-12的fibonacci数列依次为:<br>");
+        for (var i=0;i<13;i++){
+            num=fibonacci(i);
+            document.write("fibonacci("+i+")=="+num+"<br>");
+        }
+    </script>
+</body>
+</html>

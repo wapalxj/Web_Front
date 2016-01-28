@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        //Object.defineProperty
+//        var o={};
+//        Object.defineProperty(o,"name",
+//                {
+//                    value:"ynu",
+//                    writable:true
+//                });
+//        alert(o.name);
+
+        //Object.defineProperties
+        var o2={};
+        Object.defineProperties(o2,
+                {
+                    salary:{
+                        value:400,
+                        writable:false
+
+                    },
+                    gender:{
+                        value:true
+                    },
+                    height:{
+//                        value:20,
+//                        writable:true,
+                        //不能同时存在上面2行和set/get
+
+                        get: function () {
+                            return 20;
+                        },
+                        set:function(val){
+                            alert(val);
+                        }
+                    }
+                });
+        o2.height=20000;//set()
+
+    </script>
+</body>
+</html>

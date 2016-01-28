@@ -5,8 +5,15 @@
     <title>Title</title>
 </head>
 <body>
-    <script>
+    <div>
+        <span id="span">span</span>
+    </div>
 
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        $("span").innerHTML="new Span!";
     </script>
 </body>
 </html>

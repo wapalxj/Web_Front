@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Person(){
+            var a=20;//私有变量
+            this.age=20;
+        }
+        var p=new Person();
+        alert(p.age);
+        alert(p.a);//undefined
+    </script>
+</body>
+</html>

@@ -33,19 +33,20 @@
 //                }
 //            })(i);
 
-            function clickItem(id){
-                return function (){
-                    alert(id);
-                };
-            }
-            ele.onclick=clickItem(i);
+//            function clickItem(id){
+//                return function (){
+//                    alert(id);
+//                };
+//            }
+//            ele.onclick=clickItem(i);
 
             //注意：传递的是i的引用，所以不能这样写，这样写产生的3个闭包的i的引用会全部增加到4
 //            function clickItem(){
 //                return function (){
-//                    alert(i);
+//                    return alert(i);
 //                };
 //            }
+//            ele.onclick=clickItem();
         }
     </script>
 </body>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var p={
+            name:"vero",
+            say: function () {
+                return "hello";
+            },
+            _age:15,
+            get age(){
+               return this._age;
+            },
+            set age(val){
+                this._age=val;
+            }
+        };
+        alert(p.age);//get
+        p.age=100;//set
+        alert(p.age);//get
+    </script>
+</body>
+</html>

@@ -20,27 +20,7 @@
 //        };
 //        var daming=new MyObject("大明",40);
 
-        //this的改变
-        var name = "The Window";
-        var object = {
-            name :  "My Object",
-            getName: function(){
-                return this.name;
-            }
 
-};
-        alert(object.getName());//"My Object"
-        alert((object.getName)());//"My Object"
-        alert((object.getName=object.getName)());
-
-        alert(object.getName);
-        var s=new object.getName();
-        var x=50;
-        (function xxx(){
-//            x=100;
-            alert(this.x);
-        })();
-//        (a=xxx)();
 
     </script>
 </body>

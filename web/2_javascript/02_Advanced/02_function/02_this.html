@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var name="global";
+        var o={
+            name:"vero",
+            print: function () {
+                alert(this.name);
+            }
+        };
+        o.print();
+
+        //1
+        var f= o.print;
+        f();//window.f();
+
+        //2---call/apply
+        function log(){
+            alert(this.name);
+        }
+        log();//global的name
+        log.call(o,"name");//把log借给o使用--->o.log()
+
+
+        //this的改变
+//        var name = "The Window";
+//        var object = {
+//            name :  "My Object",
+//            getName: function(){
+//                return this.name;
+//            }
+//
+//        };
+//        alert(object.getName());//"My Object"
+//        alert((object.getName)());//"My Object"
+//        alert((object.getName=object.getName)());
+
+    </script>
+</body>
+</html>

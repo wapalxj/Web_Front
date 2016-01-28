@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+        }
+        function New(f){//f为构造函数
+            return function () {
+                var o={"__proto__": f.prototype};
+                f.apply(o,arguments);//o.f(arguments)
+                return o;
+            }
+        }
+
+        //先var p=New(Person),再p(xx,xx)和上面的方法就不同
+//        function New(f){//f为构造函数
+//            var o={"__proto__": f.prototype};
+//            return function () {
+//                f.apply(o,arguments);//o.f(arguments)
+//                return o;
+//            }
+//        }
+        var p1=New(Person)("vero",20);
+        alert(p1.name);
+
+
+    </script>
+</body>
+</html>
