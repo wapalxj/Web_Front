@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Object.create的兼容性</title>
+</head>
+<body>
+    <script>
+        function MyCreate(proto){
+//            if (Object.createsssss){//用于测试不存在的情况
+            if (Object.create){
+                return Object.create(proto);
+            }else {
+                var F=function(){};
+                return (function () {
+                    F.prototype=proto;
+                    return new F();
+                })()
+            }
+        }
+        var n=MyCreate({x:1,y:2});
+        alert(n.x);
+    </script>
+</body>
+</html>
