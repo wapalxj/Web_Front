@@ -6,9 +6,10 @@
 </head>
 <body>
     <script>
-        function add(i,j){
-            return i+j;
-        }
+        var i=100;
+        var j=5;
+        var a=new Function("i","j","return this.i");
+        alert(a());
     </script>
 </body>
 </html>

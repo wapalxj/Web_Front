@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //函数
+//        var color="blue";
+//        function func1(){
+//            var color="red";
+////            this.color="this--c";////属性color,func1存在的情况
+//            function func2(){
+////                alert(color);//闭包
+//                alert(this.color);//属性color,func1不存在
+//            }
+//            func2();
+//        }
+//        func1();//red
+
+        //对象
+//        var c="blue";
+//        var o={
+//            c:"red",
+//            sayColor:function (){
+//                alert(c);//全局
+//
+//            },
+//            sayThis:function(){
+//                alert(this.c);//当前对象
+//            }
+//        };
+//        o.sayColor();
+//        o.sayThis()
+
+        //构造函数
+        var name="global";
+        function pm(){
+            alert("xxxxxxxx");
+        }
+        function Person(name){
+            function pm(){
+                alert(this.name);
+            }
+
+            this.name=name;
+            this.test=function(){
+                pm();//window.pm()
+                pm.call(this);
+            }
+        }
+
+        var p=new Person("vero");
+        p.test();
+    </script>
+</body>
+</html>

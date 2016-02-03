@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function add(value){
+            var helper= function (next) {
+                value=typeof (value)==="undefined"?next:value+next;
+                return helper;
+            };
+            helper.valueOf= function () {
+                return value;
+            };
+            return helper;
+        }
+        alert(add(13).valueOf());
+    </script>
+</body>
+</html>

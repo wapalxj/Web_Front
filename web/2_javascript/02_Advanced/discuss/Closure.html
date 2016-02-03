@@ -5,6 +5,22 @@
     <title>Title</title>
 </head>
 <body>
+    <script>
+        function Circle(radius){
+            this.radius=radius;
+        }
+        Circle.prototype.getPerimeter= function () {
+            var perimeter=2*Math.PI*this.radius;
+            return perimeter.toFixed(3);
+        };
+        Circle.prototype.getArea= function () {
+            var area=Math.PI*Math.pow(this.radius,2);
+            return area.toFixed(3);
+        };
 
+        var c1=new Circle(10);
+        alert(c1.getPerimeter());
+        alert(c1.getArea());
+    </script>
 </body>
 </html>

@@ -15,12 +15,15 @@
                 return fibonacci(n-1)+fibonacci(n-2);
             }
         }
-        var num;
+        var num=-10;
+        document.write("输入为负数的时候："+fibonacci(num)+"<br>");
+        document.write("<br>");
         document.write("下标为0-12的fibonacci数列依次为:<br>");
         for (var i=0;i<13;i++){
             num=fibonacci(i);
             document.write("fibonacci("+i+")=="+num+"<br>");
         }
+
     </script>
 </body>
 </html>

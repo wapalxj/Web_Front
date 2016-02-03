@@ -10,9 +10,12 @@
         function println(content){
             return document.write(content+"<br>");
         }
-        var a="http";
-
-        println(/asd?/.test("asqqqqq"));
+//        var a="http";
+//        var b=".jpg";
+//        var c="vero ";
+        println(/^http/.test("http://www"));
+        println(/\.jpg$/.test("xx.jpg"));
+        println(/https?:/.test("https:www"));
     </script>
 </body>
 </html>

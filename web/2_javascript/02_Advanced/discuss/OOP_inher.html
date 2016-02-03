@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function Animal(){
+        }
+        Animal.prototype.type="animal";
+        Animal.prototype.sayHello=function(){
+            return "hello,I am an animal!";
+        };
+
+        function Bird(){
+            Animal.apply(this,arguments);
+        }
+        Bird.prototype=new Animal();
+        Bird.prototype.constructor=Animal;
+        Bird.prototype.deepType="bird";
+        Bird.prototype.say=function(){
+            return "hello I am a bird!";
+        };
+
+        var a=new Animal();
+        alert(a.type);
+        var b=new Bird();
+        alert(b.sayHello());
+        alert(b.say());
+        alert(b.type);
+        alert(b.deepType);
+    </script>
+</body>
+</html>

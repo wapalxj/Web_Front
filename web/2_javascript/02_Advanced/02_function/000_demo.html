@@ -78,15 +78,18 @@
  var myNumber = {
    value: 1,
    double: function(){
-     var helper = function(){
-//       value:2,
-       this.value = add(this.value,this.value);
-     };
+       var helper = function(){
+           this.value=2;
+           this.value = add(this.value,this.value);
+   };
      helper();
+//       this.value = add(this.value,this.value);
    }
  };
-myNumber.double();
+myNumber.double();//myNumber.double();等价于直接----->helper();
 alert(myNumber.value);
+alert(this.value);
+
 
  // arguments转数组
 // function add(i, j) {
@@ -158,16 +161,16 @@ alert(myNumber.value);
 
 
 // // curry函数柯里化
- function add(value){
-    var helper = function(next){
-       value = typeof(value)==="undefined"?next:value+next;
-       return helper;
-    };
-    helper.valueOf = function(){
-      return value;
-    };
-    return helper
- }
+// function add(value){
+//    var helper = function(next){
+//       value = typeof(value)==="undefined"?next:value+next;
+//       return helper;
+//    };
+//    helper.valueOf = function(){
+//      return value;
+//    };
+//    return helper
+// }
 
 
 </script>

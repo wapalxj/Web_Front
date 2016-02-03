@@ -27,18 +27,21 @@
         //使用闭包解决
         for(var i=1;i<=3;i++){
             var ele=document.getElementById(i);
+
+            //第一种写法：匿名函数
 //            ele.onclick=(function (id) {
 //                return function () {
 //                    alert(id);
 //                }
 //            })(i);
 
-//            function clickItem(id){
-//                return function (){
-//                    alert(id);
-//                };
-//            }
-//            ele.onclick=clickItem(i);
+            //第二种写法：函数声明
+            function clickItem(id){
+                return function (){
+                    alert(id);
+                };
+            }
+            ele.onclick=clickItem(i);
 
             //注意：传递的是i的引用，所以不能这样写，这样写产生的3个闭包的i的引用会全部增加到4
 //            function clickItem(){

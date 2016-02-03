@@ -6,26 +6,25 @@
 </head>
 <body>
     <script>
-        if(!Function.prototype.mbind){
-            Function.prototype.mbind=function(obj){
-                var func = this, args = arguments;//func就是使用的替代方法
+        if(!Function.prototype.bind){
+            Function.prototype.bind=function(obj){
+                var func = this;//记录当前调用对象
+                var args = arguments;
                 return function() {
-                    //从参数列表的第一个开始(而不是第0个，第0个是OBJ对象)
-                    func.apply(obj, Array.prototype.slice.call(args,1));
+                    //从参数列表的第一个开始(而不是第0个，第0个是obj对象)
+                    func.apply(obj, Array.prototype.slice.call(args,1,args.length));
                 }
             };
         }
-
-
-
         function move(x, y) {
             this.x += x;
             this.y += y;
         }
         var point = {x:1, y:2};
-        var pointmove = move.mbind(point, 2, 2);
-        pointmove(); // {x:3, y:4}
-        alert(point.x)
+        var pointMove = move.bind(point, 2, 2);
+        pointMove(); // {x:3, y:4}
+        alert("point.x:"+point.x+",point.y:"+point.y)
+
     </script>
 </body>
 </html>

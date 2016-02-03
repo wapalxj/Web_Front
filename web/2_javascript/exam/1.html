@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    /**
+     * 	最简单的做法是封装Object.prototype.toString.call/apply(v)
+     我这里使用自定义的一些形式
+     * @param content
+     */
+    function println(content){
+        return document.write(content+"<br>");
+    }
+    function myType(v){
+        if ((typeof v) == "object"){
+            if(v==null){
+                return "null";
+            }else{
+                switch (true){
+                    case (v instanceof Array):
+                        return "Array";
+                    case (v instanceof Date):
+                        return "Date";
+                    case (v instanceof Number):
+                        return "Number";
+                    case (v instanceof Boolean):
+                        return "Boolean";
+                    case (v instanceof RegExp):
+                        return "Regexp";
+                    case (v instanceof Error):
+                        return "Error";
+                    case (v instanceof String):
+                        return "String";
+                    default:
+                        return "object";
+                }
+            }
+        }else{
+            return (typeof v);
+        }
+    }
+    println(myType(1));
+    println(myType(false));
+    println(myType({}));
+    println(myType([]));
+    println(myType(function () {}));
+    println(myType(new Date));
+
+</script>
+</body>
+</html>

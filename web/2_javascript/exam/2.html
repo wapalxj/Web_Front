@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //使用二分法+循环的方式
+        function search(arr,e){
+            var low=0;//获取头元素索引
+            var high=arr.length-1;//获取尾元素索引
+            var middle;
+            while(low<=high){
+                middle=Math.floor((low+high)/2);//获取中间元素的索引
+                if(arr[middle]==e){
+                    return middle;//查找成功
+                }else if(e>arr[middle]){
+                    low=middle+1;//比中间个数大，向右查找
+                }else if(e<arr[middle]){
+                    high=middle-1;//比中间个数小，向左查找
+                }
+            }
+            return -1;//查询不到目标元素
+        }
+        var arr=[1, 2, 4, 6, 7, 9, 19,20, 30, 40, 45, 47];
+        alert(search(arr,45));
+        alert(search(arr,49));
+    </script>
+</body>
+</html>

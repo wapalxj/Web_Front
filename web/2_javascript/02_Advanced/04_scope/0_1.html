@@ -3,19 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <!--麦子JS面向对象节-->
+    <!--麦子JS面向对象节Javascript 函数声明 的优先级 高于 变量声明的优先级，但 不会 覆盖变量赋值-->
 </head>
 <body>
     <script>
-        function f(a,b){
-            alert(a);
-            alert(b);
+//        function f(a,b){
+//            alert(a);
+//            alert(b);
+//
+//            var b=100;
+//            alert(b);
+//            function a(){
+//            }
+//        }
+//        f(1,2);
 
-            var b=100;
-            function a(){
+//            function f2(){
+//                return 20;
+//            }
+//            var f2;
+//            alert(f2);
+
+        var a= (function () {
+            return f();
+            var f=555555;
+            function f(){
+                return 3;
             }
-        }
-        f(1,2);
+        })();
+        alert(a);
     </script>
 </body>
 </html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        //不使用循环，使用二分法+递归的方式
+        function search(arr,e){
+            var low=0;//获取头元素索引
+            var high=arr.length-1;//获取尾元素索引
+            var middle;
+            function binSearch(arr,low,high,e){//使用递归
+                if(low<=high){
+                    middle=Math.floor((low+high)/2);//获取中间元素的索引
+                    if(arr[middle]==e){
+                        return middle;//查找成功
+                    }else if(e>arr[middle]){
+                        return binSearch(arr,middle+1,high,e);//元素比中间个数大，进入递归
+                    }else if(e<arr[middle]){
+                        return binSearch(arr,low,middle-1,e);//元素比中间个数小，进入递归
+                    }
+                }else {
+                    return -1;//查询不到目标元素
+                }
+            }
+            return binSearch(arr,low,high,e);
+        }
+        var arr=[1, 2, 4, 6, 7, 9, 19,20, 30, 40, 45, 47];
+        alert("45存在的位置是："+search(arr,45));
+        alert("999存在的位置是："+search(arr,999));
+    </script>
+</body>
+</html>

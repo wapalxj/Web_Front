@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var o=new Object();
+        alert(Object.prototype.toString.apply(o));
+        alert(Object.prototype.toString.apply(o).slice(8,-1));
+
+        var a=1;
+        alert(a.toString());
+        alert(Object.prototype.toString(a));
+        alert(Object.prototype.toString.call(a));
+        alert(Object.prototype.toString.call(a).slice(8,-1));
+
+    </script>
+</body>
+</html>
