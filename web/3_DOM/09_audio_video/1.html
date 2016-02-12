@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>audio&video</title>
+</head>
+<body>
+    <audio id="v" loop controls src="fang.mp3"></audio>
+    <br>
+    <button id="d" onclick="duration()">时长：</button>
+    <button onclick="load()">load</button>
+    <button onclick="play()">play</button>
+    <button onclick="pause()">pause</button>
+    <button onclick="addVolume()">addVolume</button>
+    <button onclick="minusVolume()">minusVolume</button>
+    <button onclick="muted()">静音</button>
+    <button onclick="playbackRate()">playbackRate播放速度</button>
+    <button onclick="currentTime10()">currentTime10</button>
+    <script>
+        var a=document.getElementById('v');
+
+        function load(){
+            a.load();
+        }
+        function play(){
+            a.play();
+        }
+        function pause(){
+            a.pause();
+        }
+        function playbackRate(){//增加播放速度
+            a.playbackRate+=1;
+        }
+        function currentTime10(){//设置播放时间--chrome无效
+            a.currentTime=10;
+        }
+        function addVolume(){//增加音量
+            a.volume+=0.1;
+        }
+        function minusVolume(){//减小音量
+            a.volume-=0.1;
+        }
+        function muted(){//静音
+            a.muted=a.muted?false:true;
+        }
+        function duration(){//显示时长
+            var d=document.getElementById('d');
+            d.textContent+=a.duration+'秒';
+            d.disabled=1;
+        }
+
+        var aa=new Audio();
+        alert(aa.canPlayType('audio/mp4'));
+        alert(aa.canPlayType('video/ogg; codecs="theora, vorbis"'));
+    </script>
+</body>
+</html>
