@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单验证</title>
+</head>
+<body>
+    <form name="form">
+        <input type="text" name="input" value="第二个框不要输入，直接提交">
+        <input type="text" name="tx" required>
+        <input type="submit">
+    </form>
+    <script>
+        var form=document.forms.form;
+        form.input.select();//选中文本
+        alert('input表单提交后是否会验证：'+form.input.willValidate);
+        alert('表单是否验证通过：'+form.checkValidity());
+
+        //自定义异常信息
+        form.tx.addEventListener('invalid',function(event){
+//            var target=event.target;
+//            if (target.validity.valueMissing){
+//                target.setCustomValidity('verovero');
+//            }
+            if (form.tx.validity.valueMissing){
+               form.tx.setCustomValidity('verovero');
+            }
+        });
+    </script>
+</body>
+</html>

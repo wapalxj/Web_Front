@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+
+    <style type="text/css">
+
+        /*表单居中*/
+
+        .main{
+
+            margin:50px auto;
+
+            width:300px;
+
+        }
+
+        /*label字体设定*/
+
+        label{font-size:20px;
+
+            font-weight:bold;}
+
+
+
+
+        form div{height:50px;}
+
+        /*提交按钮的背景色大小以及字体颜色*/
+
+        .submit{
+
+            width:100px;
+
+            height:30px;
+
+            background-color:rgb(215,83,184);
+
+            margin-left: 45px;
+
+            color:white;
+
+            border-color: rgb(215,83,184);
+
+        }
+
+        /*文本域高度*/
+
+        .textarea{
+
+            height:100px;
+
+        }
+
+        /*选择文件按钮的外边距*/
+
+        [type=button]{
+
+            margin:5px;
+
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+<!--主内容块-->
+
+<div class="main">
+
+    <!--表单控件-->
+
+    <form action="#" method="post" >
+
+        <!--头像标签以及选择文件按钮-->
+
+        <div>
+
+            <label>头像</label>
+
+            <input type="button" value="选择文件">未选择任何文件
+
+        </div>
+
+        <!--昵称以及内容框-->
+
+        <div>
+
+            <label>昵称</label>
+
+            <input type="text">
+
+        </div>
+
+        <!--学历下拉框-->
+
+        <div>
+
+            <label>学历</label>
+
+            <select >
+
+                <option value="大专" selected>大专</option>
+
+                <option value="本科">本科</option>
+
+            </select>
+
+        </div>
+
+        <!--性别单选框-->
+
+        <div>
+
+            <label for="sex">性别</label>
+
+            <input type="radio" name="sex" value="male" checked>男
+
+            <input type="radio" name="sex" value="female">女
+
+        </div>
+
+        <!--爱好复选框-->
+
+        <div>
+
+            <label for="hobby">爱好</label>
+
+            <input type="checkbox" name="hobby" value="movie" checked>电影
+
+            <input type="checkbox" name="hobby" value="photo">摄影
+
+            <input type="checkbox" name="hobby" value="music">音乐
+
+            <input type="checkbox" name="hobby" value="read" checked="checked">阅读
+
+        </div>
+
+        <!--签名文本域-->
+
+        <div class="textarea">
+
+            <label>签名</label>
+
+            <textarea  cols="20" rows="5" ></textarea>
+
+        </div>
+
+        <!--提交按钮-->
+
+        <div >
+
+            <input type="submit" class="submit" value="保存">
+
+        </div>
+
+    </form>
+
+    <div>
+
+</body>
+
+</html>
+

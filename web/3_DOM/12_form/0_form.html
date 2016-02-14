@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form id="fff" name="f-name">
+        <input id="aa" type="text" name="a-name">
+    </form>
+        <input id="bb" type="text" name="b" form="fff">
+    <script>
+        var form=document.getElementById('fff');
+        var a=document.getElementById('aa');
+        var b=document.getElementById('bb');
+
+        alert(form.length);//form的子元素个数
+
+        //b的name属性值
+        alert(b.name);
+
+
+        //b.form直接指向form属性值的元素，也就是直接指向form元素节点
+        alert(b.form==fff);//true
+        alert(b.form=="fff");//false
+        alert(b.form.name);//f-name
+
+        //fff--->b的form属性节点的值
+        alert(b.attributes.form.nodeValue);</script>
+</body>
+</html>
