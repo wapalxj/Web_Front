@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .f-hidden{
+            width:0;
+            height: 0;
+            display: none;
+        }
+        .m-upload{
+            display: block;
+            background-image: url("icon2.jpg");
+            background-size: 100%;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form class="f-hidden">
+        <input id="file" name="image" type="file">
+    </form>
+    <label for="file" class="m-upload">选择</label>
+</body>
+</html>

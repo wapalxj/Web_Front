@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>请在chrome/firefox下测试</title>
+    <style>
+        #o{
+            background-color: #a41a4a;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="o"></div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+
+        function fadeout(element){
+            var distance=1;
+            var stepLength=distance/30;//30帧
+            var step= function () {
+                if (element.style.opacity>0){
+//                    alert(element.style.opacity);
+                    element.style.opacity-=stepLength;
+                }else if(element.style.opacity<=0){
+                    element.style.opacity=0;
+                    clearInterval(interalOpacity);
+                }
+            };
+            element.style.opacity=1;
+            var interalOpacity=setInterval(step,100/3);
+
+//            var step=function(){
+//                if (e.style.filter=="alpha(opacity>0)"){
+//                    e.style.filter="alpha(opacity-="+stepLength*100+")";
+//                }else if (e.style.filter=="alpha(opacity<=0)"){
+//                    e.style.filter="alpha(opacity=0)";
+//                    clearInterval(interalOpacity);
+//                }
+//            };
+//            var interalOpacity=setInterval(step,100/3);
+        }
+
+        fadeout($('o'));
+    </script>
+
+</body>
+</html>

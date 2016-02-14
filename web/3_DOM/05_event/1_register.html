@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #div1,#div2{
+            width:200px;
+            height:200px ;
+            background-color: #2d7dca;
+        }
+        #div2{
+            background-color: #ca4d07;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">div1</div>
+    <div id="div2">div2</div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        var div1=$("div1");
+
+        var e1;
+        div1.addEventListener("click",function (e){
+            div1.textContent+="div1被点击了！！";
+            e1=e;
+        },false);
+
+        var div2=$("div2");
+        div2.addEventListener("click",function (){
+            div2.textContent+="div2被点击了！！";
+            div1.dispatchEvent(e1);
+        },false);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="file" id="file">
+        <input type="file" name="image">
+        <br>
+        <input type="button" onclick="Re()" value="reset">
+    </form>
+
+    <script>
+//        var fileForm=document.forms.file;
+        var fileForm=document.getElementById('file');//两种方式均可以
+        function Re(){
+            fileForm.reset();
+        }
+    </script>
+</body>
+</html>

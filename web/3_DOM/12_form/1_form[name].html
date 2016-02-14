@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <form name="test">
+        <input name="a">
+    </form>
+    <script>
+        var testForm=document.forms.test;
+        alert(testForm['a'].name);
+        alert(testForm.elements['a'].tagName);
+
+        testForm['a'].name='bbb';
+        alert(testForm['a'].name);//testForm['a']依然可以获取到
+        alert("-"+testForm.elements['a'].tagName);//testForm.elements['a']获取不到
+    </script>
+</body>
+</html>
