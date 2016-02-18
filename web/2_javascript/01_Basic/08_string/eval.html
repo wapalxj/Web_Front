@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        eval("var x=10;var y=20;alert(x+y)");
+
+        alert(eval(prompt("Enter a expression","2+3")));
+
+        //解析JSON
+        var json="{'name':'vero','age':20}";
+        var jsObj=eval("("+json+")");
+        document.write("name: "+jsObj.name+", age: "+jsObj.age);
+    </script>
+</body>
+</html>

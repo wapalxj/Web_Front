@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input type="button" id="ajax_txt" value="txt_ajax" onclick="doAjax('server_txt.html')">
+    <input type="button" id="ajax_html" value="html_ajax" onclick="doAjax('server_html.html')">
+    <input type="button" id="ajax_json" value="json_ajax" onclick="doAjax('server_json.html')">
+    <input type="button" id="ajax_xml" value="xml_ajax" onclick="doAjax('server_xml.xml')">
+    <input type="button" id="ajax_js" value="xml_ajax" onclick="doAjax('server_js.js')">
+
+    <div id="div">test</div>
+    <script>
+        var txt=document.getElementById('ajax_txt');
+        var html=document.getElementById('ajax_html');
+//        txt.onclick=doAjax('server_txt.html');
+//        html.onclick=doAjax('server_html.html');
+        txt.addEventListener('click',doAjax('server_txt.html'),false);
+
+
+
+        function doAjax(url){
+            var xhr=null;
+            if(window.XMLHttpRequest){
+                xhr=new XMLHttpRequest();
+            }else if(window.ActiveXObject){
+                xhr=new ActiveXObject('Microsoft.XMLHTTP');
+            }else {
+                alert('浏览器不支持Ajax');
+                return false;
+            }
+            if (xhr){
+                xhr.open('GET',url,true);
+                xhr.onreadystatechange= function () {
+//                    alert(xhr.readyState);//检测变化
+                    if (xhr.readyState==4){
+                        if (xhr.status==200){
+                            //解析文本和HTML
+                            document.getElementById('div').innerHTML=xhr.responseText;
+                            //解析JSON
+                            var jsonObj=eval('('+xhr.responseText+')');
+                            document.getElementById('div').innerHTML=jsonObj.name+"---->"+jsonObj.age+'----qq:'+jsonObj.qq;
+                            //解析XML
+                            var xmlObj=xhr.responseXML;
+                            var xmlRoot=xmlObj.documentElement;
+                            var vnix=xmlRoot.firstElementChild.data;
+                            document.getElementById('div').innerHTML=vnix;
+                            //解析JS代码
+                            var data=xhr.responseText;
+                            document.getElementById('div').innerHTML=eval(data);
+                        }
+                    }
+                };
+                xhr.send(null);
+            }else {
+                alert('error');
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

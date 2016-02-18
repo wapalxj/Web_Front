@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>时间选择器</title>
+</head>
+<body>
+    <select name="year" id="year">
+        <option value="0">--</option>
+        <option value="1999">1999</option>
+        <option value="2000">2000</option>
+        <option value="2001">2001</option>
+    </select>年
+    <select name="month" id="month">
+        <option value="0">--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select>月
+    <select name="date" id="date">
+        <option value="0">--</option>
+    </select>日
+
+    <script>
+        function addEvent(obj,type,fn){
+            if(obj.addEventListener){
+                return obj.addEventListener(type,fn);
+            }else if(obj.attachEvent){
+                return obj.attachEvent('on'+type,fn);
+            }
+        }
+        var months=[1,2,3,4,5,6,7,8,9,10,11,12];//月份数组
+        var dates=[0,31,28,31,30,31,30,31,31,30,31,30,31];//为了后面方便计算，第一个月天数下标设置为1开始
+        var mYear=document.getElementById('year');
+        var mMonth=document.getElementById('month');
+        var mDate=document.getElementById('date');
+
+        //清除列表函数
+        function clear(ele){
+            for(var i=ele.length-1;i>0;i--){
+                ele.remove(i);
+            }
+        }
+        //先清除月份列表:因为开始时没有选择年份
+        clear(mMonth);
+        //年选择事件
+        addEvent(
+                mYear, 'change',function(event){
+                        if (mYear.value==0) {
+                            //清除：题目的第2个要求：年为初始状态，“月”、“日”下拉选择框一定为初始状态。
+                            clear(mMonth);
+                            clear(mDate);
+                        }else {
+                            //初始化月份列表
+                            if(mMonth.length>1){
+                                return;
+                            }
+                            for(var j=0;j<months.length;j++){
+                                var option = new Option(months[j],months[j]);
+                                mMonth.add(option);
+                            }
+                        }
+                }
+        );
+        //月份选择事件
+        addEvent(
+                mMonth, 'change',function(event){
+                    if (mMonth.value==0) {
+                        //天数清除：题目的第3个要求，月为初始状态，日一定为初始状态
+                        clear(mDate);
+                    }else {
+                        clear(mDate);
+                        dates[2]=test(mYear.value)?29:28 ;//2月天数判断
+                        for(var j=1;j<=dates[mMonth.value];j++){
+                            var option = new Option(j,j);
+                            mDate.add(option);
+                        }
+                    }
+                }
+        );
+
+        //判断是闰年还是平年
+        function test(year){
+            if(year%100==0){
+                if(year%400==0){
+                    return true;
+                }else{
+                    return false;
+                }
+            }else if(year%4==0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
