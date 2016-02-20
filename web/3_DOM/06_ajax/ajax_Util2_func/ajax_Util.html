@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax封装成函数</title>
+</head>
+<body>
+    <script>
+        function Ajax(type,url,data,success,failed){
+            //创建XHR对象
+            if (window.XMLHttpRequest){
+                xhr=new XMLHttpRequest();
+            }else {
+                xhr=new ActiveXObject('Microsoft.XMLHTTP');
+            }
+
+            var type=type.toUpperCase();
+            //用于清除缓存
+            var random=Math.random();
+
+            if (typeof  data=='object'){
+                var str='';
+                for(var key in data){
+                    str+=key+'='+data[key]+'&';
+                }
+                data=str.replace(/&$/,'');
+            }
+            if (type=='GET'){
+                if (data){
+                    xhr.open('GET',url+'?'+data,true);
+                }else {
+                    xhr.open('GET',url+'?t='+random,true);
+                }
+                xhr.send();
+            }else if(type=="POST"){
+                xhr.open('POST',url,true);
+                xhr.setRequestHeader("Content-type","application/x-www-form-urlencode");
+                xhr.send(data);
+            }
+            //处理返回数据
+            xhr.onreadystatechange=function(){
+                if (xhr.readyState==4){
+                    if (xhr.status==200){
+                        success(xhr.responseText);
+                    }else {
+                        if (failed){
+                            failed(xhr.status);
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

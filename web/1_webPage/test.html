@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        /* 选择金额 */
+        .alipy-main .select-money {
+            padding: .22rem 0;
+            text-align: center;
+        }
+        .alipy-main .select-money a {
+            border: 1px solid #b0b0b0;
+            border-radius: .03rem;
+            color: #a5a5a5;
+            display: inline-block;
+            height: .38rem;
+            line-height: .36rem;
+            width: .8rem;
+            margin:5.2px;
+        }
+
+        .alipy-main .select-money a:first-child {
+            float: left;
+        }
+        .alipy-main .select-money a:last-child {
+            float: right;
+        }
+
+        .alipy-main .select-money a.active {
+            border-color: #f18f10;
+            color: #f18f10;
+        }
+        .alipy-main .select-money a:active {
+            background: #fafafa;
+        }
+        .alipy-main .balance {
+            color: #a5a5a5;
+            margin: .125rem 0 0;
+            text-align: right;
+        }
+
+        .clear{
+            background-color: red;
+            width: 100%;
+            height: auto;
+            justify-content: space-between;
+            display: flex;
+        }
+        .clear a{
+            background-color: #0ba2ff;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="select-money clear">
+    <a href="javascript:void(0);" class="remove-safari-highlight active" my="10">10元</a>
+    <a href="javascript:void(0);" class="remove-safari-highlight " my="30">30元</a>
+    <a href="javascript:void(0);" class="remove-safari-highlight " my="50">50元</a>
+    <a href="javascript:void(0);" class="remove-safari-highlight " my="100">100元</a>
+    <a href="javascript:void(0);" class="remove-safari-highlight " my="300">300元</a>
+    <a href="javascript:void(0);" class="remove-safari-highlight " my="500">500元</a>
+</div>
+
+
+
+</body>
+</html>
