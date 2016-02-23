@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>多列布局_定宽+自适应</title>
+    <style>
+        body{  font:30px/1.5 'microsoft yahei';color:#333;outline:0;  }
+        p{  margin: 0;  padding: 0;  }
+        .parent{
+            background-color: #6e6e6e;
+            display: flex;
+        }
+        .left{
+            background-color: #0e63b6;
+            width: 100px;
+            margin-right: 20px;
+        }
+        .right{
+            background-color: #45b68f;
+            /*适应剩余空间*/
+            flex: 1;
+        }
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="left">
+        <p>left</p>
+    </div>
+    <div class="right">
+        <p>right</p>
+        <p>right</p>
+    </div>
+</div>
+</body>
+</html>
