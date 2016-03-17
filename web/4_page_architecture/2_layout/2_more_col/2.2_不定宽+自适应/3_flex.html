@@ -8,21 +8,19 @@
         p{  margin: 0;  padding: 0;  }
         .parent{
             background-color: #6e6e6e;
-            display: table;
-            width: 100%;
-            table-layout: fixed;
+            display: flex;
         }
-        .left,.right{
+        .left{
             background-color: #0e63b6;
-            display: table-cell;
+            /*和第一种解决方案一样，可以设置left或者left的子元素内容的宽度*/
+            /*修改宽度就可以*/
+            width: 200px;
+            margin-right: 20px;
         }
         .right{
             background-color: #45b68f;
-        }
-        .left {
-            width: 100px;
-            padding-right: 20px;
-            background-clip:content-box;
+            /*适应剩余空间*/
+            flex: 1;
         }
     </style>
 </head>

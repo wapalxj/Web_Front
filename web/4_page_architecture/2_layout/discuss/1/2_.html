@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>inline-block+vertical-align</title>
+    <style>
+
+        /*inline-block+vertical-align:兼容性好，只在子元素设置*/
+        *{font-size:0;/*去除标签之间的间隙*/}
+        .parent{margin:0 auto;padding:0;width: 500px;height: 500px;}
+        .child1{background-color: #00dddd;height: inherit}
+        .child2{background-color: #cd11dd;height: 200px}
+        .child3{background-color: #ddb712;height: 300px}
+        .child4{background-color: #dd1116;height: 400px}
+        .child{width: 25%;display: inline-block;vertical-align: bottom}
+    </style>
+</head>
+<body>
+<div class="parent">
+    <div class="child child1"></div>
+    <div class="child child2"></div>
+    <div class="child child3"></div>
+    <div class="child child4"></div>
+</div>
+</body>
+</html>

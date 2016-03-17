@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <title>Image Gallery</title>
+    <script type="text/javascript" src="scripts/showPic.js"></script>
+</head>
+
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="images/fireworks.jpg" title="A fireworks display" onclick="showPic(this); return false;">Fireworks</a>
+        </li>
+        <li>
+            <a href="images/coffee.jpg" title="A cup of black coffee" onclick="showPic(this); return false;">Coffee</a>
+        </li>
+        <li>
+            <a href="images/rose.jpg" title="A red, red rose" onclick="showPic(this); return false;">Rose</a>
+        </li>
+        <li>
+            <a href="images/bigben.jpg" title="The famous clock" onclick="showPic(this); return false;">Big Ben</a>
+        </li>
+    </ul>
+    <img id="placeholder" src="images/placeholder.gif" alt="my image gallery" />
+    <script>
+        function showPic(whichpic){
+            var source = whichpic.getAttribute("href");
+            var placeholder = document.getElementById("placeholder");
+            placeholder.setAttribute("src",source);
+        }
+        function countBodyChildren(){
+            var body_element = document.getElementsByTagName("body")[0];
+//            alert (body_element.childNodes[8].tagName);
+            document.write(body_element.childNodes[0].tagName+"<br>");
+            document.write(body_element.childNodes[1].tagName+"<br>");
+            document.write(body_element.childNodes[2].tagName+"<br>");
+            document.write(body_element.childNodes[3].tagName+"<br>");
+            document.write(body_element.childNodes[4].tagName+"<br>");
+            document.write(body_element.childNodes[5].tagName+"<br>");
+            document.write(body_element.childNodes[6].tagName+"<br>");
+            document.write(body_element.childNodes[7].tagName+"<br>");
+            document.write(body_element.childNodes[8].tagName+"<br>");
+        }
+        window.onload=countBodyChildren;
+    </script>
+
+    <body>
+        <p>p1</p>
+    </body>
+    <body>
+        <h1>h1</h1>
+    </body>
+</body>
+</html>

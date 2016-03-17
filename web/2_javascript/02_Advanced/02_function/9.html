@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        function Foo(){
+            //成员变量并不是局部变量
+            this.a=10000;
+            var a=10;
+            var b=666666;
+            c=888888;
+//            alert(this.b);//un
+//            alert(this.c);//888888
+            return this;
+        }
+//        Foo();
+        Foo.a=222;
+        alert(Foo.a);//222
+        alert(Foo().a);//10000-----等价于Foo();alert(a);
+        alert(Foo().b);//un
+    </script>
+</body>
+</html>

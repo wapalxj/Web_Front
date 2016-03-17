@@ -2,27 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>多列布局_定宽+自适应</title>
+    <title>等高</title>
     <style>
         body{  font:30px/1.5 'microsoft yahei';color:#333;outline:0;  }
         p{  margin: 0;  padding: 0;  }
         .parent{
             background-color: #6e6e6e;
-            display: table;
-            width: 100%;
-            table-layout: fixed;
+            overflow: hidden;
         }
-        .left,.right{
+        .left{
             background-color: #0e63b6;
-            display: table-cell;
-        }
-        .right{
-            background-color: #45b68f;
-        }
-        .left {
+            float: left;
             width: 100px;
-            padding-right: 20px;
-            background-clip:content-box;
+            margin-right: 20px;
+        }
+        .right {
+            background-color: #b60844;
+            overflow: hidden;
+        }
+
+        .left,.right{
+            padding-bottom: 9999px;
+            margin-bottom: -9999px;
         }
     </style>
 </head>
@@ -32,6 +33,8 @@
         <p>left</p>
     </div>
     <div class="right">
+        <p>right</p>
+        <p>right</p>
         <p>right</p>
         <p>right</p>
     </div>

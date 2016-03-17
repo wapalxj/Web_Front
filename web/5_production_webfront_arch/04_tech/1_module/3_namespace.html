@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <script>
+        var namespace=(function () {
+            var cache={};//缓存所有模块
+            //参数：模块名，依赖列表，定义
+            function createModule(name,deps,definition){
+                if(arguments.length===1){
+                    return cache[name];
+                }
+                //必须先取得所有依赖的模块
+                deps=deps.map(function(depName){
+                    return namespace(depName);
+                });
+                //初始化模块并返回
+                cache[name]=definition.apply(null,deps);
+
+                return cache[name];
+            }
+            return createModule;
+        })();
+
+
+
+        namespace('a', [], function(){
+               return 1;
+            });
+
+
+        namespace('b', ['a'], function(a){
+               return a + 2;
+             });
+
+        alert(namespace('c', ['a', 'b'], function(a, b){
+            return a + b; // => 4
+        }));
+
+        alert(namespace("math",[],function(){
+            function add(a,b){return a+b}
+            function sub(a,b){return a-b}
+            return {
+                add:add,
+                sub:sub
+            }
+        }).add(200,300));
+    </script>
+</body>
+</html>

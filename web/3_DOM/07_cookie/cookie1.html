@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #wrap{background-color: #CCC}
+        .diplay-p{display: inline-block}
+        #display{cursor:pointer;display: inline-block;float: right}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <p class="diplay-p">网易云课堂微专业，帮助你掌握专业技能，令你求职或加薪多一份独特优势！
+            <a href="http://www.baidu.com">立即查看&gt</a>
+        </p>
+        <p id="display">X 点我关闭</p>
+    </div>
+    <script>
+        function $(id){
+            return document.getElementById(id);
+        }
+        //检查cookie
+        function checkPop(){
+            var wrap=$('wrap');
+            var display =$('display');
+            if(getCookie('close')){
+                wrap.style.display='none';
+            }
+            display.addEventListener('click', function () {
+                wrap.style.display='none';
+                setCookie('close',true,50);//cookie生存期为50天
+            });
+        }
+        //设置cookie
+        function setCookie(name,value,expires){
+            var cookie=encodeURIComponent(name)+'='+encodeURIComponent(value);
+            var date=new Date();
+            if(expires){
+                date.setDate(date.getDate()+expires);
+                cookie+=';expires+'+date.toGMTString();
+            }
+            document.cookie=cookie;
+        }
+        //获取cookie
+        function getCookie(name){
+            var all=document.cookie;
+            if (all===''){return false;}
+            var list=all.split(';');
+            for (var i=0;i<list.length;i++){
+                var item=list[i];
+                var p=item.indexOf('=');
+                var key=item.substring(0,p);//获取key
+                if (name==decodeURIComponent(key)){
+                    var value=item.substring(p+1);//获取value
+                    value=decodeURIComponent(value);
+                    return value;
+                }
+            }
+            return false;
+        }
+        checkPop();
+    </script>
+</body>
+</html>

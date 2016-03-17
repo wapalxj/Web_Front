@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{  font:30px/1.5 'microsoft yahei';color:#333;outline:0;  }
+        body{margin:20px;}
+        p{  margin: 0;  padding: 0;  }
+        .parent{
+            background-color: #00dddd;
+
+            /*给C增加一个G=20px*/
+            margin-left: -20px;
+        }
+        .col:nth-child(even){
+            background-color: #66dd07;
+        }
+        .col{
+            background-clip:content-box;
+            background-color: red;
+            float: left;
+            width: 25%;
+            padding-left: 20px;
+            /*将上面的padding-left包含进去*/
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="col"><p>1</p></div>
+        <div class="col"><p>2</p></div>
+        <div class="col"><p>3</p></div>
+        <div class="col"><p>4</p></div>
+    </div>
+</body>
+</html>

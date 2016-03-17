@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    var math={
+        add: function (a,b) {
+            return a+b;
+        },
+        sub:function (a,b) {
+            return a - b;
+        }
+
+    };
+
+    var caculator=(function(m){
+        var action='add';
+        function compute(a, b) {
+            switch (action){
+                case 'add':
+                    return m.add(a,b);
+                case 'sub':
+                    return m.sub(a,b);
+            }
+        }
+        return {
+            compute:compute
+        }
+    })(math);
+    alert(caculator.compute(10,2));
+</script>
+</body>
+</html>

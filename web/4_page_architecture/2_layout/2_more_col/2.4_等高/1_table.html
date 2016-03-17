@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>多列布局_定宽+自适应</title>
+    <title>等高</title>
     <style>
         body{  font:30px/1.5 'microsoft yahei';color:#333;outline:0;  }
         p{  margin: 0;  padding: 0;  }
@@ -20,9 +20,9 @@
             background-color: #45b68f;
         }
         .left {
+            background-clip:content-box;
             width: 100px;
             padding-right: 20px;
-            background-clip:content-box;
         }
     </style>
 </head>
@@ -32,6 +32,8 @@
         <p>left</p>
     </div>
     <div class="right">
+        <p>right</p>
+        <p>right</p>
         <p>right</p>
         <p>right</p>
     </div>

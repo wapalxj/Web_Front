@@ -34,30 +34,30 @@ body{min-width:1280px;}
 .m-slides .banner-3{background:url(../img/banner_03.jpg);}
 .m-slides .banner-4{background:url(../img/banner_04.jpg);}
 .m-slides .banner-5{background:url(../img/banner_05.jpg);}
-.m-nav{position:absolute;bottom:0;}
-.m-nav .navswrap{width:100%;height:162px;cursor:pointer;}
-.m-nav .navwrap{float:left;}
-.m-nav .nav{width:204px;height:162px;}
-.m-nav .navwrap-0 .nav{background:url(../img/sbanner_00.png) right center;}
-.m-nav .navwrap-1 .nav{background:url(../img/sbanner_01.png) right center;}
-.m-nav .navwrap-2 .nav{background:url(../img/sbanner_02.png) right center;}
-.m-nav .navwrap-3 .nav{background:url(../img/sbanner_03.png) right center;}
-.m-nav .navwrap-4 .nav{background:url(../img/sbanner_04.png) right center;}
-.m-nav .navwrap-5 .nav{background:url(../img/sbanner_05.png) right center;}
-.m-nav .prcsswrap{height:5px;}
-.m-nav .prcss{height:5px;width:0%;}
-.m-nav .navwrap-0 .prcsswrap{background-color:#7b5596;}
-.m-nav .navwrap-0 .prcss{background-color:#49047a;}
-.m-nav .navwrap-1 .prcsswrap{background-color:#83a2cc;}
-.m-nav .navwrap-1 .prcss{background-color:#13478f;}
-.m-nav .navwrap-2 .prcsswrap{background-color:#e18e40;}
-.m-nav .navwrap-2 .prcss{background-color:#b94e00;}
-.m-nav .navwrap-3 .prcsswrap{background-color:#47acab;}
-.m-nav .navwrap-3 .prcss{background-color:#00605f;}
-.m-nav .navwrap-4 .prcsswrap{background-color:#c86c8c;}
-.m-nav .navwrap-4 .prcss{background-color:#a41a4a;}
-.m-nav .navwrap-5 .prcsswrap{background-color:#9089d6;}
-.m-nav .navwrap-5 .prcss{background-color:#4a419e;}
+.nav {position:absolute;bottom:0;}
+.nav .navswrap{width:100%;height:162px;cursor:pointer;}
+.nav .navwrap{float:left;}
+.nav .nav{width:204px;height:162px;}
+.nav .navwrap-0 .nav{background:url(../img/sbanner_00.png) right center;}
+.nav .navwrap-1 .nav{background:url(../img/sbanner_01.png) right center;}
+.nav .navwrap-2 .nav{background:url(../img/sbanner_02.png) right center;}
+.nav .navwrap-3 .nav{background:url(../img/sbanner_03.png) right center;}
+.nav .navwrap-4 .nav{background:url(../img/sbanner_04.png) right center;}
+.nav .navwrap-5 .nav{background:url(../img/sbanner_05.png) right center;}
+.nav .prcsswrap{height:5px;}
+.nav .prcss{height:5px;width:0%;}
+.nav .navwrap-0 .prcsswrap{background-color:#7b5596;}
+.nav .navwrap-0 .prcss{background-color:#49047a;}
+.nav .navwrap-1 .prcsswrap{background-color:#83a2cc;}
+.nav .navwrap-1 .prcss{background-color:#13478f;}
+.nav .navwrap-2 .prcsswrap{background-color:#e18e40;}
+.nav .navwrap-2 .prcss{background-color:#b94e00;}
+.nav .navwrap-3 .prcsswrap{background-color:#47acab;}
+.nav .navwrap-3 .prcss{background-color:#00605f;}
+.nav .navwrap-4 .prcsswrap{background-color:#c86c8c;}
+.nav .navwrap-4 .prcss{background-color:#a41a4a;}
+.nav .navwrap-5 .prcsswrap{background-color:#9089d6;}
+.nav .navwrap-5 .prcss{background-color:#4a419e;}
 .m-transform{position:relative;height:100px;background-color:#fdffc9;}
 .m-transform .object{position:absolute;width:100px;height:100px;background-color:#c9f0ff;}
 .f-cb:after{display:block;clear:both;visibility:hidden;height:0;overflow:hidden;content:".";}

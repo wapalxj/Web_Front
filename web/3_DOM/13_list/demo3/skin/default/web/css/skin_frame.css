@@ -33,17 +33,17 @@ body{background:#1a1a1a; color:#e2e2e2;}/* 背景色 native外框 默认字色 *
 .g-sd{border-right-color:rgba(255,255,255,0.2);}
 .g-sd .bg.s-show{z-index:-1;opacity:1;background:url(../img/sidebar_bg.png);}/* 侧栏背景 投影 右边线色 */
 .g-sd:after{background:url(../img/sidebar_shadow.png) repeat-y;}
-.m-nav h2.go a::before,.m-nav ul li a,.m-nav li a::before,.m-nav li.z-sel a::before, .m-nav li.z-menu a::before,.m-nav h2 .addbtn::before{background-image:url(../img/sidebar.png); background-repeat:no-repeat;}
-.m-nav h2,.m-nav h2 a:not(.z-btn):first-child{color:#666;}
-.m-nav h2 a:not(.z-btn):first-child:hover{color:#a7a7a7;}
-.m-nav h2 .addbtn{background:-webkit-linear-gradient(#2d2d2d,#1c1c1c); border:1px solid #000; box-shadow:inset 0 0 1px rgba(255,255,255,0.4); color:#ccc;}
-.m-nav h2 .addbtn:hover{background:-webkit-linear-gradient(#4a4a4a,#1d1d1d);}
-.m-nav h2 .addbtn:active{background:-webkit-linear-gradient(#1c1c1c,#2d2d2d);}
-.m-nav li a{color:#9b9b9b;}
-.m-nav li.z-sel a,.m-nav ul.my li.z-menu a{color:#fff;}
-.m-nav li input[type=text]{background:#fff;border:1px solid #000;color:#333;text-shadow:none;}
-.m-nav ul.sys li.z-sel a,.m-nav ul.my li.z-sel a{box-shadow:inset 1px 0 0px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.5);}
-.m-nav ul.my li.z-offline a{color: #585757;}
+.nav h2.go a::before,.nav ul li a,.nav li a::before,.nav li.z-sel a::before, .nav li.z-menu a::before,.nav h2 .addbtn::before{background-image:url(../img/sidebar.png); background-repeat:no-repeat;}
+.nav h2,.nav h2 a:not(.z-btn):first-child{color:#666;}
+.nav h2 a:not(.z-btn):first-child:hover{color:#a7a7a7;}
+.nav h2 .addbtn{background:-webkit-linear-gradient(#2d2d2d,#1c1c1c); border:1px solid #000; box-shadow:inset 0 0 1px rgba(255,255,255,0.4); color:#ccc;}
+.nav h2 .addbtn:hover{background:-webkit-linear-gradient(#4a4a4a,#1d1d1d);}
+.nav h2 .addbtn:active{background:-webkit-linear-gradient(#1c1c1c,#2d2d2d);}
+.nav li a{color:#9b9b9b;}
+.nav li.z-sel a,.nav ul.my li.z-menu a{color:#fff;}
+.nav li input[type=text]{background:#fff;border:1px solid #000;color:#333;text-shadow:none;}
+.nav ul.sys li.z-sel a,.nav ul.my li.z-sel a{box-shadow:inset 1px 0 0px rgba(255,255,255,0.1), 0 1px 2px rgba(0,0,0,0.5);}
+.nav ul.my li.z-offline a{color: #585757;}
 
 /***** 底栏 *****/
 .m-player .bg.s-show{z-index:-1;opacity:1;background:url(../img/player_bg.png) repeat-x;}
