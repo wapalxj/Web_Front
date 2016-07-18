@@ -31,6 +31,7 @@
                 wrap.style.display='none';
                 setCookie('close',true,50);//cookie生存期为50天
             });
+
         }
         //设置cookie
         function setCookie(name,value,expires){
@@ -38,7 +39,7 @@
             var date=new Date();
             if(expires){
                 date.setDate(date.getDate()+expires);
-                cookie+=';expires+'+date.toGMTString();
+                cookie+=';expires='+date.toGMTString();
             }
             document.cookie=cookie;
         }
